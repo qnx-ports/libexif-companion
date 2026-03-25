@@ -3,7 +3,7 @@
 
 pkgname=libexif
 pkgver=0.6.25
-pkgrel=${pkgrel:-0}
+pkgrel=0
 pkgdesc="library to parse an EXIF file and read the data from those tags"
 url="https://sourceforge.net/projects/libexif/"
 arch="all"
@@ -27,7 +27,6 @@ check() {
 package() {
     make DESTDIR="$pkgdir" install
 }
-options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 8dbf56c85f18157affde0e8500b847424ec508e7dfd40ff9f8d85816d45eccc4b70ebca891550a10824641bbd63f69050f9e24be82bcbfa9e8acda2f123ce848  libexif-0.6.25.tar.bz2
 "
